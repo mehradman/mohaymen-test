@@ -1,0 +1,10 @@
+myfirsylog : $timestamp hello devops
+: {"iran"
+"city": "tehran",
+"population": "$randomlongint",
+"men": "int",
+"women": "population/$randomshortint",
+"hOffset": "2*population",
+"vOffset": 100,
+"weather": "sun1.city = (sun1.city / 100) * 90;"
+ }
