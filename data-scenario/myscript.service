@@ -1,0 +1,13 @@
+[Unit]
+Description=My Custom Script Service
+After=network.target
+
+[Service]
+Type=simple
+ExecStart=/usr/local/bin/myscript.sh
+Restart=always
+User=root
+ExecStartPre=/bin/chmod +x /usr/local/bin/myscript.sh  # Ensure executable
+
+[Install]
+WantedBy=multi-user.target

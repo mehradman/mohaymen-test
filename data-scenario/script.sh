@@ -18,6 +18,8 @@ create_log_entry() {
 
 while true; do
     log_record=$(create_log_entry)
-    echo "${log_record}" | nc localhost 8080
+    # echo "${log_record}" | nc localhost 8080
+    echo "${log_record}" | logger -t "myscript" -p local0.info  # Send to syslog with tag "myscript" and priority "local0.info"
     sleep 3
 done
+
